@@ -389,7 +389,6 @@ def convert_reduce_l2(node, params, layers, lambda_func, node_name,
     input_0 = ensure_tf_type(layers[node.input[0]],
                              name="%s_const" % keras_name)
     axis = params.get("axes", [-1])[0]
-    print('axis: ', axis)
 
     def target_layer(x, axis=axis):
         import tensorflow as tf
